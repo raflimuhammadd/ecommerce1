@@ -40,13 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/coba', [CheckoutController::class, 'coba'])->name('coba');
 });
 
-Route::fallback(function () {
-    return view('pages.404');
-});
-
 Auth::routes();
 
-Route::middleware('auth', 'auth.user')->group(function () {
+Route::middleware(['auth', 'auth.user'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboardAdmin');
 
@@ -75,4 +71,8 @@ Route::get('login/google/callback', [LoginController::class, 'redirectToGoogleCa
 Route::get('/generate', function () {
     \Illuminate\Support\Facades\Artisan::call('storage:link');
     echo 'ok';
+});
+
+Route::fallback(function () {
+    return view('pages.404');
 });

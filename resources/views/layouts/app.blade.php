@@ -16,7 +16,8 @@
     <nav class="bg-gray-800 text-white relative w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
         aria-label="Global">
         <div class="flex items-center justify-between">
-            <a class="flex-none text-xl font-semibold dark:text-grey" href="#" aria-label="Brand">Yasir Health Store</a>
+            <a class="flex-none text-xl font-semibold dark:text-grey" href="#" aria-label="Brand">Yasir Health
+                Store</a>
             <div class="md:hidden">
                 <button type="button"
                     class="hs-collapse-toggle w-8 h-8 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -116,7 +117,9 @@
                 </a>
             </div>
 
-            <p class="text-lg">Kami percaya bahwa kesehatan bukan sekadar tujuan, tapi sebuah perjalanan. Dengan produk-produk terbaik dan proses pemilihan yang teliti, kami memberikan Anda solusi kesehatan yang dapat diandalkan, membantu Anda menjelajahi dunia kesejahteraan dengan lebih baik..</p>
+            <p class="text-lg">Kami percaya bahwa kesehatan bukan sekadar tujuan, tapi sebuah perjalanan. Dengan
+                produk-produk terbaik dan proses pemilihan yang teliti, kami memberikan Anda solusi kesehatan yang dapat
+                diandalkan, membantu Anda menjelajahi dunia kesejahteraan dengan lebih baik..</p>
         </div>
     </section>
 
@@ -128,27 +131,31 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="../../node_modules/preline/dist/preline.js"></script>
-    <script src="{{ asset('assets/static/js/components/dark.js') }}"></script>
-    <script src="{{ asset('assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('assets/compiled/js/app.js') }}"></script>
-    <script src="{{ asset('assets/extensions/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/extensions/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('assets/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
-    <script src="{{ asset('assets/static/js/pages/datatables.js') }}"></script>
+
+    <script src="{{ asset('admin/static/js/components/dark.js') }}"></script>
+    <script src="{{ asset('admin/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('admin/compiled/js/app.js') }}"></script>
+    <script src="{{ asset('admin/extensions/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/extensions/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('admin/static/js/pages/datatables.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
     <script>
-        new Glide('.glide', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 3,
-            focusAt: 'center',
-            breakpoints: {
-                768: {
-                    perView: 1
+        // Initialize Glide.js carousel if element exists
+        const glideElement = document.querySelector('.glide');
+        if (glideElement) {
+            new Glide('.glide', {
+                type: 'carousel',
+                startAt: 0,
+                perView: 3,
+                focusAt: 'center',
+                breakpoints: {
+                    768: {
+                        perView: 1
+                    }
                 }
-            }
-        }).mount();
+            }).mount();
+        }
     </script>
 </body>
 
